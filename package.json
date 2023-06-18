@@ -1,0 +1,10 @@
+{
+  "name": "@proshop/types",
+  "version": "1.0.0",
+  "description": "Proshop platform types",
+  "author": "Anar Allakhverdiev <wiseadme@gmail.com>",
+  "main": "",
+  "module": "index.d.ts",
+  "type": "module",
+  "license": "ISC"
+}
