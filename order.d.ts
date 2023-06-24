@@ -35,10 +35,10 @@ export interface IOrder {
     delivery: Maybe<IOrderDelivery>
     amount: number
     customer: Maybe<IOrderCustomer>
-    cart?: string | ICart
-    orderId?: Maybe<string>
-    qrcode?: Maybe<string>
+    cart: Maybe<string | ICart>
+    orderId: Maybe<string>
+    qrcode: Maybe<string>
     status: IOrderStatuses
-    payment?: Maybe<number>
+    payment: Maybe<number>
     executor: Maybe<IUser>
 }
