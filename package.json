@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Proshop platform types",
   "author": "Anar Allakhverdiev <wiseadme@gmail.com>",
-  "main": "types/index.d.ts",
-  "module": "types/index.d.ts",
+  "main": "index.d.ts",
+  "module": "index.d.ts",
   "type": "module",
   "license": "ISC"
 }
