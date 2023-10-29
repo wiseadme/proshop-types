@@ -1,5 +1,6 @@
 import { ISEOType } from './common'
 import { Maybe } from './utils'
+import { IAsset } from './asset'
 
 export interface ICategoryConditions {
     visible: boolean
@@ -10,17 +11,15 @@ export interface ICategory {
     id: string
     title: string
     image: Maybe<string>
-    seo?: ISEOType
+    assets: IAsset[]
+    seo: ISEOType
     url: string
-    parent: Maybe<string | ICategory>
+    parentId: Maybe<string>
     order?: number
-    children: Maybe<string[] | ICategory[]>
     length: number
     conditions: ICategoryConditions
 }
 
-export interface ICategoryMongoModel extends Omit<ICategory, 'id' | 'children' | 'parent'>{
+export interface ICategoryMongoModel extends Omit<ICategory, 'id' | 'parent'>{
     _id: string
-    children: Maybe<string[] | ICategoryMongoModel[]>
-    parent: Maybe<string | ICategoryMongoModel>
 }

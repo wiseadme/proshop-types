@@ -1,6 +1,6 @@
 import { Maybe } from './utils'
 import { IAsset } from './asset'
-import { IAttribute } from './attribute'
+import { IProduct } from './product'
 
 export interface IOptionProduct {
     url: string
@@ -12,16 +12,18 @@ export interface IOption {
     id: string
     name: string
     variantId: string
+    ownerId: string
+    product: Maybe<IProduct | string>
     price?: number
     quantity?: number
-    url?: string
+    order: number
+    url: Maybe<string>
     description?: Maybe<string>
-    assets?: IAsset[]
-    modelAttribute: Maybe<IAttribute>
-    products?: IOptionProduct[]
+    image: Maybe<string>
 }
 
-export interface IOptionMongoModel extends Omit<IOption, 'id' | 'assets'> {
+export interface IOptionMongoModel extends Omit<IOption, 'id' | 'assets' | 'product'> {
     _id: string
     assets?: string[] | IAsset[]
+    product: Maybe<string>
 }
