@@ -1,8 +1,9 @@
 import { IProduct } from './product'
 
 export interface IFavorite {
+    id: string
     product?: IProduct
-    userId: string
+    userId?: string
     sku: string
 }
 
